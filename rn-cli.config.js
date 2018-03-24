@@ -1,16 +1,23 @@
-'use strict';
+/* eslint-disable import/no-extraneous-dependencies */
 
-var path = require('path');
-var blacklist = require('metro-bundler/src/blacklist');
+const path = require('path');
+const blacklist = require('metro-bundler/src/blacklist');
 
-var config = {
+function getRoots() {
+  const root = process.env.REACT_NATIVE_APP_ROOT;
+  if (root) {
+    return [path.resolve(root)];
+  }
+  return [path.resolve(__dirname)];
+}
+
+const config = {
   getProjectRoots() {
     return getRoots();
   },
 
   getBlacklistRE() {
-    return blacklist([
-    ]);
+    return blacklist([]);
   },
 
   getAssetExts() {
@@ -25,13 +32,5 @@ var config = {
     return ['react-native', 'react-vr'];
   },
 };
-
-function getRoots() {
-  var root = process.env.REACT_NATIVE_APP_ROOT;
-  if (root) {
-    return [path.resolve(root)];
-  }
-  return [path.resolve(__dirname)];
-}
 
 module.exports = config;

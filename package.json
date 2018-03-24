@@ -1,5 +1,6 @@
 {
-  "name": "journey_through_react_vr",
+  "name": "journey-through-react-vr",
+  "description": "🕴 A journey through your favorite react libraries used in ReactVR",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,23 +8,58 @@
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ignore-path .gitignore .",
+    "readme": "emdaer && git add *.md .emdaer/.offline",
+    "precommit": "yarn lint && yarn readme",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "dependencies": {
     "ovrui": "~2.0.0",
     "react": "16.0.0",
     "react-native": "~0.48.0",
-    "three": "^0.87.0",
     "react-vr": "~2.0.0",
-    "react-vr-web": "~2.0.0"
+    "react-vr-web": "~2.0.0",
+    "three": "^0.87.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-angular": "^6.1.3",
+    "@emdaer/cli": "^2.0.0",
+    "@emdaer/plugin-contributors-details-github": "^2.0.0",
+    "@emdaer/plugin-value-from-package": "^2.0.0",
+    "@emdaer/transform-prettier": "^2.0.0",
+    "@emdaer/transform-table-of-contents": "^2.0.0",
+    "babel-eslint": "^8.2.2",
     "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
     "jest": "^19.0.2",
+    "metro-bundler": "^0.22.1",
+    "prettier": "^1.11.1",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",
     "xopen": "1.0.0"
+  },
+  "author": "Luke Herrington <luke@fourkitchens.com> (https://fourkitchens.com)",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infiniteluke/journey-through-react-vr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infiniteluke/journey-through-react-vr/issues"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "jest": {
     "preset": "react-vr"
