@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppRegistry, asset, Pano, View } from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
 import Router from 'react-router/MemoryRouter';
 import Route from 'react-router/Route';
 
@@ -38,6 +38,24 @@ export default function Journey() {
         <Pano source={asset('chess-world.jpg')} />
         <Link to="/victory" rotateY={-90} />
         <Link to="/downshift" rotateY={90} />
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <Text
+              style={{
+                layoutOrigin: [0.5, 0.5],
+                transform: [{ translate: [0, 0, -3] }],
+                fontSize: 0.4,
+                textAlign: 'center',
+                backgroundColor: 'gray',
+                color: 'white',
+              }}
+            >
+              {'<-- Pick a library -->'}
+            </Text>
+          )}
+        />
         <Route path="/victory" render={() => <Chart data={DATA} />} />
         <Route
           path="/downshift"
