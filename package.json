@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node -e \"console.log('open browser at http://localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
-    "bundle": "node node_modules/react-vr/scripts/bundle.js",
+    "bundle": "cp -rf static_assets vr/build && cp -f vr/index.deploy.html vr/build/index.html && node node_modules/react-vr/scripts/bundle.js",
     "build": "yarn bundle",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
