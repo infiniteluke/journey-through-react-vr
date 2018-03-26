@@ -9,7 +9,6 @@ function init(bundle, parent, options) {
   const vr = new VRInstance(bundle, 'Journey', parent, {
     // Add custom options here
     ...options,
-    enableHotReload: true,
   });
 
   // Begin the animation loop
