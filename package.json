@@ -15,12 +15,16 @@
     "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "dependencies": {
+    "downshift": "^1.31.2",
     "ovrui": "~2.0.0",
+    "prop-types": "^15.6.1",
     "react": "16.0.0",
     "react-native": "~0.48.0",
+    "react-router": "^4.2.0",
     "react-vr": "~2.0.0",
     "react-vr-web": "~2.0.0",
-    "three": "^0.87.0"
+    "three": "^0.87.0",
+    "victory": "^0.25.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",

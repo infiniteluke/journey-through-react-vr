@@ -6,9 +6,10 @@
 import { VRInstance } from 'react-vr-web';
 
 function init(bundle, parent, options) {
-  const vr = new VRInstance(bundle, 'journey_through_react_vr', parent, {
+  const vr = new VRInstance(bundle, 'Journey', parent, {
     // Add custom options here
     ...options,
+    enableHotReload: true,
   });
 
   // Begin the animation loop
