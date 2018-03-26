@@ -9,7 +9,7 @@
     "build": "yarn build",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest",
+    "test": "echo ADD TESTS",
     "lint": "eslint --ignore-path .gitignore .",
     "readme": "emdaer && git add *.md .emdaer/.offline",
     "precommit": "yarn lint && yarn readme",
