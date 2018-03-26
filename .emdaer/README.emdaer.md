@@ -19,10 +19,13 @@
 -->
 
 ## Setup
-* `git clone git@github.com:infiniteluke/journey-through-react-vr.git`\
+* `git clone git@github.com:infiniteluke/journey-through-react-vr.git`
 * `cd journey-through-react-vr`
 * `yarn`
 * `yarn start`
+
+## Demo
+[WIP demo](https://infiniteluke.github.io/journey-through-react-vr/)
 
 ## Contributors
 <!--emdaer-p

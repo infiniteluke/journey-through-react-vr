@@ -17,16 +17,19 @@ journey-through-react-vr
 
 <ul>
 <li><a href="#setup">Setup</a></li>
+<li><a href="#demo">Demo</a></li>
 <li><a href="#contributors">Contributors</a></li>
 </ul>
 
 <h2 id="setup">Setup</h2>
 <ul>
-<li><code>git clone git@github.com:infiniteluke/journey-through-react-vr.git</code>\</li>
+<li><code>git clone git@github.com:infiniteluke/journey-through-react-vr.git</code></li>
 <li><code>cd journey-through-react-vr</code></li>
 <li><code>yarn</code></li>
 <li><code>yarn start</code></li>
 </ul>
+<h2 id="demo">Demo</h2>
+<p><a href="https://infiniteluke.github.io/journey-through-react-vr/">WIP demo</a></p>
 <h2 id="contributors">Contributors</h2>
 <details>
 <summary><strong>Contributors</strong></summary><br>
