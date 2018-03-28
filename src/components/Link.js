@@ -13,13 +13,12 @@ const PARALLAX_DEGREE_SHIFT_UPPER = 15;
 // 0,1 = -10, 10
 // 1, 0 = 10, -10
 // 1, 1 = 10, 10
-function linearTransform(num, sign = 1) {
+function linearTransform(num) {
   return (
-    sign *
-    ((num - MOVE_OFFSET_LOWER) /
+    (num - MOVE_OFFSET_LOWER) /
       (MOVE_OFFSET_UPPER - MOVE_OFFSET_LOWER) *
       (PARALLAX_DEGREE_SHIFT_UPPER - PARALLAX_DEGREE_SHIFT_LOWER) +
-      PARALLAX_DEGREE_SHIFT_LOWER)
+    PARALLAX_DEGREE_SHIFT_LOWER
   );
 }
 
@@ -78,12 +77,12 @@ class Link extends Component {
           }}
           onExit={() => {
             clearTimeout(this.gazeTimeout);
-            // this.setState(() => ({
-            //   rotation: {
-            //     x: 0,
-            //     y: 0,
-            //   },
-            // }));
+            this.setState(() => ({
+              rotation: {
+                x: 0,
+                y: 0,
+              },
+            }));
           }}
           onMove={this.handleMove}
           hitSlop={{ top: 0.1, bottom: 0.1, left: 0.1, right: 0.1 }}
@@ -93,6 +92,7 @@ class Link extends Component {
               fontSize: 0.2,
               textAlignVertical: 'center',
               textAlign: 'center',
+              transform: [{ translateZ: 0.05 }],
             }}
           >
             {children}
