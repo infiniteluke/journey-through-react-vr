@@ -1,7 +1,6 @@
 import React from 'react';
 import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
-import Router from 'react-router/MemoryRouter';
-import Route from 'react-router/Route';
+import { Route, MemoryRouter } from 'react-router';
 
 import Dropdown from './src/components/Dropdown';
 import Chart from './src/components/Chart';
@@ -33,17 +32,22 @@ const DATA = [
 
 export default function Journey() {
   return (
-    <Router>
+    <MemoryRouter>
       <View>
         <Pano source={asset('chess-world.jpg')} />
-        <Link to="/victory" rotateY={-90} />
-        <Link to="/downshift" rotateY={90} />
+        <Link to="/downshift" rotateY={-90}>
+          Dropdown
+        </Link>
+        <Link to="/victory" rotateY={90}>
+          Graphing
+        </Link>
         <Route
           path="/"
           exact
           render={() => (
             <Text
               style={{
+                position: 'absolute',
                 layoutOrigin: [0.5, 0.5],
                 transform: [{ translate: [0, 0, -3] }],
                 fontSize: 0.4,
@@ -62,7 +66,7 @@ export default function Journey() {
           render={() => <Dropdown placeholder="Select an item" items={ITEMS} />}
         />
       </View>
-    </Router>
+    </MemoryRouter>
   );
 }
 

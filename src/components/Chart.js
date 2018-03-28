@@ -66,8 +66,9 @@ function Chart({ data }) {
   return (
     <View
       style={{
+        position: 'absolute',
         layoutOrigin: [0.5, 0.5],
-        transform: [{ translate: [0.5, 0, -3] }],
+        transform: [{ translate: [0, 0, -3] }],
       }}
     >
       <SpotLight

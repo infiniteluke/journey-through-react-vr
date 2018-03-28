@@ -17,9 +17,11 @@
   },
   "dependencies": {
     "downshift": "^1.31.2",
+    "lodash": "^4.17.5",
     "ovrui": "~2.0.0",
     "prop-types": "^15.6.1",
     "react": "16.0.0",
+    "react-motion": "^0.5.2",
     "react-native": "~0.48.0",
     "react-router": "^4.2.0",
     "react-vr": "~2.0.0",
