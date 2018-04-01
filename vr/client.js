@@ -12,6 +12,7 @@ function init(bundle, parent, options) {
     // raycasters: [SimpleRaycaster],
     cursorVisibility: 'visible',
     ...options,
+    enableHotReload: true,
   });
 
   // Begin the animation loop

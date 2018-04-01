@@ -28,7 +28,8 @@
     "react-vr-web": "~2.0.0",
     "simple-raycaster": "^1.0.1",
     "three": "^0.87.0",
-    "victory": "^0.25.6"
+    "victory": "^0.25.6",
+    "wobbly": "^0.0.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",
