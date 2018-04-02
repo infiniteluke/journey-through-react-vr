@@ -6923,9 +6923,9 @@ window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
 
-wobbly@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/wobbly/-/wobbly-0.0.5.tgz#8b0f4bb549252082af59a92245c625dfac9fc227"
+wobbly@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/wobbly/-/wobbly-0.0.6.tgz#b917b3bd6efc162800c5effee404af0d4ab457ef"
 
 wordwrap@0.0.2:
   version "0.0.2"

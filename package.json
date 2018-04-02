@@ -29,7 +29,7 @@
     "simple-raycaster": "^1.0.1",
     "three": "^0.87.0",
     "victory": "^0.25.6",
-    "wobbly": "^0.0.5"
+    "wobbly": "^0.0.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.1.3",

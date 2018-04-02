@@ -5,6 +5,7 @@ import { Route, MemoryRouter } from 'react-router';
 import Dropdown from './src/components/Dropdown';
 import Chart from './src/components/Chart';
 import Link from './src/components/Link';
+import WobblyShape from './src/components/WobblyShape';
 
 const ITEMS = ['donuts', 'pizza', 'kale', 'carrots'];
 const DATA = [
@@ -41,6 +42,9 @@ export default function Journey() {
         <Link to="/victory" rotateY={90}>
           Graphing
         </Link>
+        <Link to="/animated" rotateY={180}>
+          Animated
+        </Link>
         <Route
           path="/"
           exact
@@ -65,6 +69,7 @@ export default function Journey() {
           path="/downshift"
           render={() => <Dropdown placeholder="Select an item" items={ITEMS} />}
         />
+        <Route path="/animated" render={() => <WobblyShape />} />
       </View>
     </MemoryRouter>
   );

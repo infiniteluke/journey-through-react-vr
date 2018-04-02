@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import {  } from 'react-native';
 import { Text, View, VrButton, Animated } from 'react-vr';
 import { withRouter } from 'react-router';
 import Wobbly from 'wobbly';
@@ -30,14 +29,14 @@ class Link extends Component {
         }}
       >
         <Wobbly>
-          {({ getMoveWrapperProps, getWrapperTransformStyle }) => (
+          {({ getMoveTargetProps, getWobblyTransformStyle }) => (
             <ParallaxButton
               onClick={() => {
                 clearTimeout(this.gazeTimeout);
                 history.push(to);
               }}
               style={{
-                transform: getWrapperTransformStyle(),
+                transform: getWobblyTransformStyle(),
                 paddingTop: 0.15,
                 paddingBottom: 0.15,
                 paddingLeft: 0.15,
@@ -51,7 +50,7 @@ class Link extends Component {
               onEnter={() => {
                 this.gazeTimeout = setTimeout(() => history.push(to), 1000);
               }}
-              {...getMoveWrapperProps({
+              {...getMoveTargetProps({
                 onExit: () => clearTimeout(this.gazeTimeout),
               })}
             >
